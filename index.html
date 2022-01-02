@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome music player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1 class="app-container__title">Awesome Music Player</h1>
+      <div class="music-container">
+        <div class="music-info">
+          <div class="music-info__img-container">
+            <img src="img/img1.png" alt="" width="200px" height="200px" />
+          </div>
+          <h2 class="music-info__author"></h2>
+          <h2 class="music-info__title"></h2>
+          <div class="music-info__time-container">
+            <div class="music-info__currenttime"></div>
+            <span>/</span>
+            <div class="music-info__duration"></div>
+          </div>
+          <div class="music-info__progress-container">
+            <div class="music-info__progress"></div>
+          </div>
+        </div>
+        <audio class="player">
+          <source
+            class="player__source"
+            src="music/Szakács Gergő - Ősz utca.mp3"
+            type="audio/mp3"
+          />
+          Your browser does not support the audio element.
+        </audio>
+        <div class="seekbar">
+          <input
+            class="seekbar__input"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="0"
+          />
+        </div>
+        <div class="navigation">
+          <button aria-label="Previous song" class="navigation__btn prev-btn">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button aria-label="Play" class="navigation__btn play-btn">
+            <i class="fas fa-play play-btn__icon"></i>
+          </button>
+          <button aria-label="Next song" class="navigation__btn next-btn">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+        <div class="volume-range">
+          <i id="volume-minus" class="fas fa-minus"></i>
+          <input
+            class="volume-range__input"
+            type="range"
+            min="0.0"
+            max="1.0"
+            step="0.1"
+            value="0.5"
+          />
+          <i id="volume-plus" class="fas fa-plus"></i>
+        </div>
+        <div class="mute"><i class="fas fa-volume-up mute__button"></i></div>
+      </div>
+      <div class="playlist__container">
+        <ul class="playlist">
+          <!-- <li class="playlist__song">
+            
+            <div class="playlist__song__title">Title</div>
+            <div class="playlist__song__author">Author</div>
+            
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
